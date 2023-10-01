@@ -10,8 +10,8 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
-  testMatch: ["tests/windows.spec.js"],
+  // testDir: './tests',
+  testMatch: ["pomtest/addToCart.test.ts"],
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -29,17 +29,29 @@ export default defineConfig({
     headless: false,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-
+    baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
 
   /* Configure projects for major browsers */
   projects: [
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+      name: "chrome:latest:MacOS Catalina@lambdatest",
+      use: {
+          viewport: { width: 1920, height: 1080 },
+      },
+  },
+  {
+      name: "chrome:latest:Windows 10@lambdatest",
+      use: {
+          viewport: { width: 1280, height: 720 },
+      },
+  },
 
     // {
     //   name: 'firefox',

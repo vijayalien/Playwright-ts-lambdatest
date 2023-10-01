@@ -1,8 +1,27 @@
 import { test, expect, chromium } from '@playwright/test';
 
+const capabilities = {
+    browserName: "Chrome", // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+    browserVersion: "latest",
+    "LT:Options": {
+        platform: "Windows 10",
+        build: "Playwright Test Build",
+        name: "Playwright Test",
+        user: 'XXXXXXXXX',
+        accessKey: 'XXXXXXXXX',
+        network: true,
+        video: true,
+        console: true,
+        tunnel: false, // Add tunnel configuration if testing locally hosted webpage
+        tunnelName: "", // Optional
+        geoLocation: ''
+         // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    },
+};
 
 test("login test demo", async () => {
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.connect(`wss://cdp.lambdatest.com/playwright?capabilities=
+    ${encodeURIComponent(JSON.stringify(capabilities))}`);
     const context = await browser.newContext();
     const page = await context.newPage();
 
