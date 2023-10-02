@@ -1,0 +1,198 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\playwright.config.ts",
+    "rootDir": "C:/Users/Vijay/Playwright/Playwright_Typescript",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Vijay/Playwright/Playwright_Typescript/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chrome:latest:MacOS Catalina@lambdatest",
+        "name": "chrome:latest:MacOS Catalina@lambdatest",
+        "testDir": "C:/Users/Vijay/Playwright/Playwright_Typescript",
+        "testIgnore": [],
+        "testMatch": [
+          "pomtest/addToCartUsingFixture.test.ts"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.38.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pomtest\\addToCartUsingFixture.test.ts",
+      "file": "pomtest/addToCartUsingFixture.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Page object test demo",
+          "file": "pomtest/addToCartUsingFixture.test.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Register test_01",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome:latest:MacOS Catalina@lambdatest",
+                  "projectName": "chrome:latest:MacOS Catalina@lambdatest",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 11221,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-02T08:14:40.281Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "92fe7589f3cd844569b7-162919e94e2c325b5e63",
+              "file": "pomtest/addToCartUsingFixture.test.ts",
+              "line": 10,
+              "column": 9
+            },
+            {
+              "title": "Login test_02",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome:latest:MacOS Catalina@lambdatest",
+                  "projectName": "chrome:latest:MacOS Catalina@lambdatest",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 10462,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-02T08:14:51.504Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "92fe7589f3cd844569b7-9856392e01212a6d1ff5",
+              "file": "pomtest/addToCartUsingFixture.test.ts",
+              "line": 23,
+              "column": 9
+            },
+            {
+              "title": "Add to cart test_03",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome:latest:MacOS Catalina@lambdatest",
+                  "projectName": "chrome:latest:MacOS Catalina@lambdatest",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "timedOut",
+                      "duration": 299999,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\pages\\homePage.ts",
+                            "column": 23,
+                            "line": 12
+                          },
+                          "message": "Error: page.waitForNavigation: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================\n\n\u001b[90m   at \u001b[39mpages\\homePage.ts:12\n\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36masync\u001b[39m clickOnSpecialHotMenu() {\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForNavigation({ waitUntil\u001b[33m:\u001b[39m \u001b[32m\"networkidle\"\u001b[39m })\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m             \u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"(//span[contains(text(),'Special')]/../..)[2]\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m         ])\u001b[0m\n\n\u001b[2m    at HomePage.clickOnSpecialHotMenu (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\pages\\homePage.ts:12:23)\u001b[22m\n\u001b[2m    at C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\pomtest\\addToCartUsingFixture.test.ts:35:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-02T08:15:01.969Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\pomtest-addToCartUsingFixture-Page-object-test-demo-Add-to-cart-test-03-chrome-latest-MacOS-Catalina-lambdatest\\test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "92fe7589f3cd844569b7-438f101525fd25cbe863",
+              "file": "pomtest/addToCartUsingFixture.test.ts",
+              "line": 31,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

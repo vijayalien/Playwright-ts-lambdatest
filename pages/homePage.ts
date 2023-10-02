@@ -9,9 +9,9 @@ export default class HomePage {
 
     async clickOnSpecialHotMenu() {
         await Promise.all([
-            this.page.waitForNavigation({ waitUntil: "networkidle" }),
+            await this.page.waitForNavigation({ waitUntil: "networkidle" }),
             
-            this.page.click("(//span[contains(text(),'Special')]/../..)[2]")
+            await this.page.click("(//span[contains(text(),'Special')]/../..)[2]")
         ])
     }
 }
