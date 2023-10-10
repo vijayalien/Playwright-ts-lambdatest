@@ -42,12 +42,12 @@
         "outputDir": "C:/Users/Vijay/Playwright/Playwright_Typescript/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "id": "chrome:latest:MacOS Catalina@lambdatest",
-        "name": "chrome:latest:MacOS Catalina@lambdatest",
+        "id": "chrome",
+        "name": "chrome",
         "testDir": "C:/Users/Vijay/Playwright/Playwright_Typescript",
         "testIgnore": [],
         "testMatch": [
-          "pomtest/addToCartUsingFixture.test.ts"
+          "tests/applitoolTest.spec.ts"
         ],
         "timeout": 300000
       }
@@ -60,20 +60,20 @@
   },
   "suites": [
     {
-      "title": "pomtest\\addToCartUsingFixture.test.ts",
-      "file": "pomtest/addToCartUsingFixture.test.ts",
+      "title": "tests\\applitoolTest.spec.ts",
+      "file": "tests/applitoolTest.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Page object test demo",
-          "file": "pomtest/addToCartUsingFixture.test.ts",
-          "line": 8,
+          "title": "ACME Bank",
+          "file": "tests/applitoolTest.spec.ts",
+          "line": 70,
           "column": 6,
           "specs": [
             {
-              "title": "Register test_01",
+              "title": "handling dropdown using applitool",
               "ok": true,
               "tags": [],
               "tests": [
@@ -81,112 +81,85 @@
                   "timeout": 300000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "chrome:latest:MacOS Catalina@lambdatest",
-                  "projectName": "chrome:latest:MacOS Catalina@lambdatest",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
                   "results": [
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 11221,
+                      "duration": 23984,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-02T08:14:40.281Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "92fe7589f3cd844569b7-162919e94e2c325b5e63",
-              "file": "pomtest/addToCartUsingFixture.test.ts",
-              "line": 10,
-              "column": 9
-            },
-            {
-              "title": "Login test_02",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chrome:latest:MacOS Catalina@lambdatest",
-                  "projectName": "chrome:latest:MacOS Catalina@lambdatest",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 10462,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-10-02T08:14:51.504Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "92fe7589f3cd844569b7-9856392e01212a6d1ff5",
-              "file": "pomtest/addToCartUsingFixture.test.ts",
-              "line": 23,
-              "column": 9
-            },
-            {
-              "title": "Add to cart test_03",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 300000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chrome:latest:MacOS Catalina@lambdatest",
-                  "projectName": "chrome:latest:MacOS Catalina@lambdatest",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "timedOut",
-                      "duration": 299999,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\pages\\homePage.ts",
-                            "column": 23,
-                            "line": 12
-                          },
-                          "message": "Error: page.waitForNavigation: Navigation failed because page was closed!\n=========================== logs ===========================\nwaiting for navigation until \"networkidle\"\n============================================================\n\n\u001b[90m   at \u001b[39mpages\\homePage.ts:12\n\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36masync\u001b[39m clickOnSpecialHotMenu() {\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForNavigation({ waitUntil\u001b[33m:\u001b[39m \u001b[32m\"networkidle\"\u001b[39m })\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m             \u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m             \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m\"(//span[contains(text(),'Special')]/../..)[2]\"\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m         ])\u001b[0m\n\n\u001b[2m    at HomePage.clickOnSpecialHotMenu (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\pages\\homePage.ts:12:23)\u001b[22m\n\u001b[2m    at C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\pomtest\\addToCartUsingFixture.test.ts:35:24\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-10-02T08:15:01.969Z",
+                      "startTime": "2023-10-10T08:34:13.734Z",
                       "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-applitoolTest-ACME-Bank-handling-dropdown-using-applitool-chrome\\video.webm"
+                        },
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\pomtest-addToCartUsingFixture-Page-object-test-demo-Add-to-cart-test-03-chrome-latest-MacOS-Catalina-lambdatest\\test-failed-1.png"
+                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-applitoolTest-ACME-Bank-handling-dropdown-using-applitool-chrome\\test-finished-1.png"
                         }
                       ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "92fe7589f3cd844569b7-438f101525fd25cbe863",
-              "file": "pomtest/addToCartUsingFixture.test.ts",
-              "line": 31,
+              "id": "60a6a0f6be370252ba86-932ad4a3684aa445839c",
+              "file": "tests/applitoolTest.spec.ts",
+              "line": 84,
+              "column": 9
+            },
+            {
+              "title": "Bootstrap dropdown using applitool",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 17867,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Visual test results TestResultsSummaryData {\n  _summary: {\n    results: [ \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m ],\n    passed: \u001b[33m2\u001b[39m,\n    unresolved: \u001b[33m0\u001b[39m,\n    failed: \u001b[33m0\u001b[39m,\n    exceptions: \u001b[33m0\u001b[39m,\n    mismatches: \u001b[33m0\u001b[39m,\n    missing: \u001b[33m0\u001b[39m,\n    matches: \u001b[33m0\u001b[39m\n  },\n  _core: {\n    openEyes: \u001b[36m[AsyncFunction: openEyes]\u001b[39m,\n    openFunctionalSession: \u001b[36m[AsyncFunction: openFunctionalSession]\u001b[39m,\n    locate: \u001b[36m[AsyncFunction: locate]\u001b[39m,\n    locateText: \u001b[36m[AsyncFunction: locateText]\u001b[39m,\n    extractText: \u001b[36m[AsyncFunction: extractText]\u001b[39m,\n    closeBatch: \u001b[36m[AsyncFunction: closeBatch]\u001b[39m,\n    deleteTest: \u001b[36m[AsyncFunction: deleteTest]\u001b[39m,\n    getAccountInfo: \u001b[36m[AsyncFunction: getAccountInfo]\u001b[39m,\n    logEvent: \u001b[36m[AsyncFunction: logEvent]\u001b[39m,\n    base: {\n      openEyes: \u001b[36m[AsyncFunction: openEyes]\u001b[39m,\n      openFunctionalSession: \u001b[36m[AsyncFunction: openFunctionalSession]\u001b[39m,\n      locate: \u001b[36m[AsyncFunction: locate]\u001b[39m,\n      locateText: \u001b[36m[AsyncFunction: locateText]\u001b[39m,\n      extractText: \u001b[36m[AsyncFunction: extractText]\u001b[39m,\n      closeBatch: \u001b[36m[AsyncFunction: closeBatch]\u001b[39m,\n      deleteTest: \u001b[36m[AsyncFunction: deleteTest]\u001b[39m,\n      getAccountInfo: \u001b[36m[Function]\u001b[39m,\n      logEvent: \u001b[36m[AsyncFunction: logEvent]\u001b[39m\n    },\n    getViewportSize: \u001b[36m[AsyncFunction: getViewportSize]\u001b[39m,\n    setViewportSize: \u001b[36m[AsyncFunction: setViewportSize]\u001b[39m,\n    getNMLClient: [Function: funcWithCache] {\n      clearCache: \u001b[36m[Function (anonymous)]\u001b[39m,\n      getCachedValues: \u001b[36m[Function (anonymous)]\u001b[39m,\n      setCachedValue: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    getECClient: [Function: funcWithCache] {\n      clearCache: \u001b[36m[Function (anonymous)]\u001b[39m,\n      getCachedValues: \u001b[36m[Function (anonymous)]\u001b[39m,\n      setCachedValue: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    makeManager: \u001b[36m[AsyncFunction: makeManager]\u001b[39m\n  }\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-10T08:34:38.439Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-applitoolTest-ACME-Bank-Bootstrap-dropdown-using-applitool-chrome\\video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-applitoolTest-ACME-Bank-Bootstrap-dropdown-using-applitool-chrome\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "60a6a0f6be370252ba86-043ce219d86299cbbc9b",
+              "file": "tests/applitoolTest.spec.ts",
+              "line": 106,
               "column": 9
             }
           ]

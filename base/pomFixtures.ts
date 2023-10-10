@@ -21,14 +21,14 @@ const capabilities = {
         platform: "Windows 10",
         build: "Playwright Test New",
         name: "Playwright Test",
-        user: 'XXXXXXXXXXXXX',
-        accessKey: 'XXXXXXXXXXXXXXXXXXXX',
+        user: process.env.LAMBDATEST_USER,
+        accessKey: process.env.LAMBDATEST_ACCESSKEY,
         network: true,
         video: true,
         console: true,
         tunnel: false, // Add tunnel configuration if testing locally hosted webpage
         tunnelName: "", // Optional
-        geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+        geoLocation: ''
     },
 };
 

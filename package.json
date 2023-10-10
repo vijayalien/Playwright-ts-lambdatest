@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.21.0",
     "@playwright/test": "^1.38.1",
     "@types/node": "^20.7.0",
     "moment": "^2.29.1"
