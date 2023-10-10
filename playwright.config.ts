@@ -32,13 +32,14 @@ const config: PlaywrightTestConfig = {
         // }
     ],
 
-    testMatch: ["tests/applitoolTest.spec.ts"],
+    testMatch: ["tests/auspost/redirectEmail.spec.ts"],
     use: {
         // connectOptions: {
         //     wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=
         //     ${encodeURIComponent(JSON.stringify(capabilities))}`
         // },
-        baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
+        // baseURL: "https://ecommerce-playground.lambdatest.io/index.php?",
+        baseURL: 'https://auspost.com.au/',
         headless: false,
         screenshot: "on",
         video: "on",
