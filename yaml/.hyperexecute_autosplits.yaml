@@ -1,0 +1,33 @@
+runson: win
+autosplit: true
+retryOnFailure: true
+
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+
+maxRetries: 1
+concurrency: 2
+pre:
+  - npm install
+  - npx playwright install
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+
+post:  
+  -cat yaml/.hyperexecute_autosplits.yaml
+
+mergeArtifacts: true
+
+uploadArtefacts:
+  -name : ExecutionSnapshot
+   path:
+    -playwright-report
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+testRunnerCommand: npx playwright test
+
+jobLabel: [playwright-JestJS, win, autosplit]
