@@ -32,7 +32,7 @@ const config: PlaywrightTestConfig = {
         // }
     ],
 
-    testMatch: ["tests/auspost/redirectEmail.spec.ts"],
+    testMatch: ["tests/api/api.spec.ts"],
     use: {
         // connectOptions: {
         //     wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=

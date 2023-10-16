@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -47,7 +47,7 @@
         "testDir": "C:/Users/Vijay/Playwright/Playwright_Typescript",
         "testIgnore": [],
         "testMatch": [
-          "tests/auspost/redirectEmail.spec.ts"
+          "tests/api/api.spec.ts"
         ],
         "timeout": 300000
       }
@@ -60,21 +60,21 @@
   },
   "suites": [
     {
-      "title": "tests\\auspost\\redirectEmail.spec.ts",
-      "file": "tests/auspost/redirectEmail.spec.ts",
+      "title": "tests\\api\\api.spec.ts",
+      "file": "tests/api/api.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Auspost test",
-          "file": "tests/auspost/redirectEmail.spec.ts",
-          "line": 63,
-          "column": 6,
+          "title": "API Testing",
+          "file": "tests/api/api.spec.ts",
+          "line": 6,
+          "column": 15,
           "specs": [
             {
-              "title": "01 postage Cost module",
-              "ok": false,
+              "title": "Simple API request",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -86,71 +86,26 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 12082,
-                      "error": {
-                        "message": "frame.evaluateHandle: Execution context was destroyed, most likely because of a navigation",
-                        "stack": "Error: frame.evaluateHandle: Execution context was destroyed, most likely because of a navigation\n    at Object.executeScript (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\spec-driver-playwright\\dist\\spec-driver.js:110:32)\n    at Context.execute (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\context.js:317:37)\n    at Context.executePoll (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\context.js:349:40)\n    at Driver.getUserAgent (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:200:110)\n    at Driver.getEnvironment (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:233:35)\n    at Driver.switchToChildContext (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:602:29)\n    at Driver.refresh (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:116:9)\n    at Object.check (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\core\\dist\\check.js:63:15)\n    at Eyes.check (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\eyes\\dist\\Eyes.js:266:9)\n    at C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\tests\\auspost\\redirectEmail.spec.ts:81:9",
-                        "location": {
-                          "file": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\tests\\auspost\\redirectEmail.spec.ts",
-                          "column": 9,
-                          "line": 81
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 79 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 80 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mhomePage\u001b[33m.\u001b[39mpostageCostClick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m eyes\u001b[33m.\u001b[39mcheck(\u001b[32m'Postage cost page'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mTarget\u001b[39m\u001b[33m.\u001b[39mwindow()\u001b[33m.\u001b[39mfully())\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 82 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mcalculatePostage\u001b[33m.\u001b[39mvalidateHeader()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mcalculatePostage\u001b[33m.\u001b[39menterPostCode(\u001b[32m'3000'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'3128'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mcalculatePostage\u001b[33m.\u001b[39mvalidatePageDescriptionHeader(\u001b[32m'Delivering from MELBOURNE'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\tests\\auspost\\redirectEmail.spec.ts",
-                            "column": 9,
-                            "line": 81
-                          },
-                          "message": "Error: frame.evaluateHandle: Execution context was destroyed, most likely because of a navigation\n\n\u001b[0m \u001b[90m 79 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 80 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mhomePage\u001b[33m.\u001b[39mpostageCostClick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 |\u001b[39m         \u001b[36mawait\u001b[39m eyes\u001b[33m.\u001b[39mcheck(\u001b[32m'Postage cost page'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mTarget\u001b[39m\u001b[33m.\u001b[39mwindow()\u001b[33m.\u001b[39mfully())\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 82 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mcalculatePostage\u001b[33m.\u001b[39mvalidateHeader()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mcalculatePostage\u001b[33m.\u001b[39menterPostCode(\u001b[32m'3000'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'3128'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 |\u001b[39m         \u001b[36mawait\u001b[39m automation_PO\u001b[33m.\u001b[39mcalculatePostage\u001b[33m.\u001b[39mvalidatePageDescriptionHeader(\u001b[32m'Delivering from MELBOURNE'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at Object.executeScript (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\spec-driver-playwright\\dist\\spec-driver.js:110:32)\u001b[22m\n\u001b[2m    at Context.execute (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\context.js:317:37)\u001b[22m\n\u001b[2m    at Context.executePoll (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\context.js:349:40)\u001b[22m\n\u001b[2m    at Driver.getUserAgent (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:200:110)\u001b[22m\n\u001b[2m    at Driver.getEnvironment (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:233:35)\u001b[22m\n\u001b[2m    at Driver.switchToChildContext (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:602:29)\u001b[22m\n\u001b[2m    at Driver.refresh (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\driver\\dist\\driver.js:116:9)\u001b[22m\n\u001b[2m    at Object.check (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\core\\dist\\check.js:63:15)\u001b[22m\n\u001b[2m    at Eyes.check (C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\node_modules\\@applitools\\eyes\\dist\\Eyes.js:266:9)\u001b[22m\n\u001b[2m    at C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\tests\\auspost\\redirectEmail.spec.ts:81:9\u001b[22m"
-                        }
-                      ],
-                      "stdout": [
-                        {
-                          "text": "In automation page\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/\n"
-                        },
-                        {
-                          "text": "Visual test results TestResultsSummaryData {\n  _summary: {\n    results: [ \u001b[36m[Object]\u001b[39m ],\n    passed: \u001b[33m1\u001b[39m,\n    unresolved: \u001b[33m0\u001b[39m,\n    failed: \u001b[33m0\u001b[39m,\n    exceptions: \u001b[33m0\u001b[39m,\n    mismatches: \u001b[33m0\u001b[39m,\n    missing: \u001b[33m0\u001b[39m,\n    matches: \u001b[33m0\u001b[39m\n  },\n  _core: {\n    openEyes: \u001b[36m[AsyncFunction: openEyes]\u001b[39m,\n    openFunctionalSession: \u001b[36m[AsyncFunction: openFunctionalSession]\u001b[39m,\n    locate: \u001b[36m[AsyncFunction: locate]\u001b[39m,\n    locateText: \u001b[36m[AsyncFunction: locateText]\u001b[39m,\n    extractText: \u001b[36m[AsyncFunction: extractText]\u001b[39m,\n    closeBatch: \u001b[36m[AsyncFunction: closeBatch]\u001b[39m,\n    deleteTest: \u001b[36m[AsyncFunction: deleteTest]\u001b[39m,\n    getAccountInfo: \u001b[36m[AsyncFunction: getAccountInfo]\u001b[39m,\n    logEvent: \u001b[36m[AsyncFunction: logEvent]\u001b[39m,\n    base: {\n      openEyes: \u001b[36m[AsyncFunction: openEyes]\u001b[39m,\n      openFunctionalSession: \u001b[36m[AsyncFunction: openFunctionalSession]\u001b[39m,\n      locate: \u001b[36m[AsyncFunction: locate]\u001b[39m,\n      locateText: \u001b[36m[AsyncFunction: locateText]\u001b[39m,\n      extractText: \u001b[36m[AsyncFunction: extractText]\u001b[39m,\n      closeBatch: \u001b[36m[AsyncFunction: closeBatch]\u001b[39m,\n      deleteTest: \u001b[36m[AsyncFunction: deleteTest]\u001b[39m,\n      getAccountInfo: \u001b[36m[Function]\u001b[39m,\n      logEvent: \u001b[36m[AsyncFunction: logEvent]\u001b[39m\n    },\n    getViewportSize: \u001b[36m[AsyncFunction: getViewportSize]\u001b[39m,\n    setViewportSize: \u001b[36m[AsyncFunction: setViewportSize]\u001b[39m,\n    getNMLClient: [Function: funcWithCache] {\n      clearCache: \u001b[36m[Function (anonymous)]\u001b[39m,\n      getCachedValues: \u001b[36m[Function (anonymous)]\u001b[39m,\n      setCachedValue: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    getECClient: [Function: funcWithCache] {\n      clearCache: \u001b[36m[Function (anonymous)]\u001b[39m,\n      getCachedValues: \u001b[36m[Function (anonymous)]\u001b[39m,\n      setCachedValue: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    makeManager: \u001b[36m[AsyncFunction: makeManager]\u001b[39m\n  }\n}\n"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 184,
+                      "errors": [],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-10T09:19:46.339Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-auspost-redirectEmail-Auspost-test-01-postage-Cost-module-chrome\\video.webm"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-auspost-redirectEmail-Auspost-test-01-postage-Cost-module-chrome\\test-failed-1.png"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\tests\\auspost\\redirectEmail.spec.ts",
-                        "column": 9,
-                        "line": 81
-                      }
+                      "startTime": "2023-10-16T08:47:09.790Z",
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "26be93bafeb7c2ccdee2-ea9fb822705e458c5731",
-              "file": "tests/auspost/redirectEmail.spec.ts",
-              "line": 75,
+              "id": "7309ae5e422f628be6f9-de8467c20c7b5e3fa064",
+              "file": "tests/api/api.spec.ts",
+              "line": 8,
               "column": 9
             },
             {
-              "title": "02 Redirect email",
+              "title": "Simple API request - Assert invalid endpoint",
               "ok": true,
               "tags": [],
               "tests": [
@@ -164,46 +119,25 @@
                     {
                       "workerIndex": 1,
                       "status": "passed",
-                      "duration": 45957,
+                      "duration": 171,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "In automation page\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/receiving/manage-your-mail/redirect-hold-mail\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-10T09:20:01.128Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-auspost-redirectEmail-Auspost-test-02-Redirect-email-chrome\\video.webm"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-auspost-redirectEmail-Auspost-test-02-Redirect-email-chrome\\test-finished-1.png"
-                        }
-                      ]
+                      "startTime": "2023-10-16T08:47:09.835Z",
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "26be93bafeb7c2ccdee2-79ef1aebaf8a73007ad0",
-              "file": "tests/auspost/redirectEmail.spec.ts",
-              "line": 88,
+              "id": "7309ae5e422f628be6f9-fd218baf86e2fc869d14",
+              "file": "tests/api/api.spec.ts",
+              "line": 14,
               "column": 9
             },
             {
-              "title": "03 Test 3",
+              "title": "Simple API request - Get user data",
               "ok": true,
               "tags": [],
               "tests": [
@@ -215,62 +149,27 @@
                   "projectName": "chrome",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 2,
                       "status": "passed",
-                      "duration": 56438,
+                      "duration": 190,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "In automation page\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/receiving/manage-your-mail/redirect-hold-mail\n"
-                        },
-                        {
-                          "text": "Clicked a.header-site-title-link:first-child\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/\n"
-                        },
-                        {
-                          "text": "https://auspost.com.au/parcels-mail/calculate-postage-delivery-times/#/\n"
-                        },
-                        {
-                          "text": "Visual test results TestResultsSummaryData {\n  _summary: {\n    results: [ \u001b[36m[Object]\u001b[39m, \u001b[36m[Object]\u001b[39m ],\n    passed: \u001b[33m2\u001b[39m,\n    unresolved: \u001b[33m0\u001b[39m,\n    failed: \u001b[33m0\u001b[39m,\n    exceptions: \u001b[33m0\u001b[39m,\n    mismatches: \u001b[33m0\u001b[39m,\n    missing: \u001b[33m0\u001b[39m,\n    matches: \u001b[33m0\u001b[39m\n  },\n  _core: {\n    openEyes: \u001b[36m[AsyncFunction: openEyes]\u001b[39m,\n    openFunctionalSession: \u001b[36m[AsyncFunction: openFunctionalSession]\u001b[39m,\n    locate: \u001b[36m[AsyncFunction: locate]\u001b[39m,\n    locateText: \u001b[36m[AsyncFunction: locateText]\u001b[39m,\n    extractText: \u001b[36m[AsyncFunction: extractText]\u001b[39m,\n    closeBatch: \u001b[36m[AsyncFunction: closeBatch]\u001b[39m,\n    deleteTest: \u001b[36m[AsyncFunction: deleteTest]\u001b[39m,\n    getAccountInfo: \u001b[36m[AsyncFunction: getAccountInfo]\u001b[39m,\n    logEvent: \u001b[36m[AsyncFunction: logEvent]\u001b[39m,\n    base: {\n      openEyes: \u001b[36m[AsyncFunction: openEyes]\u001b[39m,\n      openFunctionalSession: \u001b[36m[AsyncFunction: openFunctionalSession]\u001b[39m,\n      locate: \u001b[36m[AsyncFunction: locate]\u001b[39m,\n      locateText: \u001b[36m[AsyncFunction: locateText]\u001b[39m,\n      extractText: \u001b[36m[AsyncFunction: extractText]\u001b[39m,\n      closeBatch: \u001b[36m[AsyncFunction: closeBatch]\u001b[39m,\n      deleteTest: \u001b[36m[AsyncFunction: deleteTest]\u001b[39m,\n      getAccountInfo: \u001b[36m[Function]\u001b[39m,\n      logEvent: \u001b[36m[AsyncFunction: logEvent]\u001b[39m\n    },\n    getViewportSize: \u001b[36m[AsyncFunction: getViewportSize]\u001b[39m,\n    setViewportSize: \u001b[36m[AsyncFunction: setViewportSize]\u001b[39m,\n    getNMLClient: [Function: funcWithCache] {\n      clearCache: \u001b[36m[Function (anonymous)]\u001b[39m,\n      getCachedValues: \u001b[36m[Function (anonymous)]\u001b[39m,\n      setCachedValue: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    getECClient: [Function: funcWithCache] {\n      clearCache: \u001b[36m[Function (anonymous)]\u001b[39m,\n      getCachedValues: \u001b[36m[Function (anonymous)]\u001b[39m,\n      setCachedValue: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    makeManager: \u001b[36m[AsyncFunction: makeManager]\u001b[39m\n  }\n}\n"
+                          "text": "{\n  data: {\n    id: \u001b[33m2\u001b[39m,\n    email: \u001b[32m'janet.weaver@reqres.in'\u001b[39m,\n    first_name: \u001b[32m'Janet'\u001b[39m,\n    last_name: \u001b[32m'Weaver'\u001b[39m,\n    avatar: \u001b[32m'https://reqres.in/img/faces/2-image.jpg'\u001b[39m\n  },\n  support: {\n    url: \u001b[32m'https://reqres.in/#support-heading'\u001b[39m,\n    text: \u001b[32m'To keep ReqRes free, contributions towards server costs are appreciated!'\u001b[39m\n  }\n}\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-10T09:20:47.464Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-auspost-redirectEmail-Auspost-test-03-Test-3-chrome\\video.webm"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Vijay\\Playwright\\Playwright_Typescript\\test-results\\tests-auspost-redirectEmail-Auspost-test-03-Test-3-chrome\\test-finished-1.png"
-                        }
-                      ]
+                      "startTime": "2023-10-16T08:47:09.813Z",
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "26be93bafeb7c2ccdee2-577d1f776acaf321e6d4",
-              "file": "tests/auspost/redirectEmail.spec.ts",
-              "line": 101,
+              "id": "7309ae5e422f628be6f9-75100593f188b92b3442",
+              "file": "tests/api/api.spec.ts",
+              "line": 19,
               "column": 9
             }
           ]
